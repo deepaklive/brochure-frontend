@@ -8,6 +8,14 @@ export interface Menu {
 }
 
 const MENUITEMS = [
+
+  { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
+  { state: 'My Profile', type: 'link', name: 'my-profile', icon: 'crop_7_5' },
+  { state: 'resume', type: 'link', name: 'Resume', icon: 'view_comfy' },
+  { state: 'one-pager', type: 'link', name: 'One-Pager', icon: 'view_comfy' },
+  { state: 'edit-main', type: 'link', name: 'Edit Profile', icon: 'view_list' },
+  
+
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },

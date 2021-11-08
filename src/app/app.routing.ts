@@ -9,7 +9,7 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/brochure',
         pathMatch: 'full'
       },
       {
@@ -20,6 +20,10 @@ export const AppRoutes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'brochure',
+        loadChildren: () => import('./brochure/brochure.module').then(m => m.BrochureModule)
       }
     ]
   }
