@@ -15,6 +15,7 @@ import { EditCandidateComponent } from './edit-brochure/edit-candidate/edit-cand
 import { EditCompetenciesComponent } from './edit-brochure/edit-competencies/edit-competencies.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { CandidateService } from '../_services/candidate.service';
+import { ResumeComponent } from './resume/resume.component';
 
 
 
@@ -27,7 +28,8 @@ import { CandidateService } from '../_services/candidate.service';
     EditBrochureComponent,
     EditInstituteComponent,
     EditCandidateComponent,
-    EditCompetenciesComponent
+    EditCompetenciesComponent,
+    ResumeComponent
   ],
   imports: [
     CommonModule,
