@@ -10,6 +10,8 @@ import { CandidateService } from 'src/app/_services/candidate.service';
 export class CandidateListComponent implements OnInit {
 
   candidates: CandidateModel[]=[];
+
+  selectedCandidate!: CandidateModel;
   isLoading=false;
 
   constructor(
@@ -33,6 +35,10 @@ export class CandidateListComponent implements OnInit {
         this.isLoading = false;
       }
     );
+  }
+
+  onViewDetails(c:CandidateModel){
+    this.selectedCandidate=c;
   }
 
 }

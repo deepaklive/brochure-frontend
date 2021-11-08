@@ -1,22 +1,80 @@
 <mat-card>
-    <div class="p-20 bg-info position-relative">
-        <h4 class="card-title text-white m-0">Participants</h4>
-        <h6 class="card-subtitle text-white m-0 op-5">Arranged Alphabatically</h6>
-        <button mat-mini-fab color="accent" class="add-contact">+</button>
-    </div>
-    <div *ngIf="candidates" class="message-box contact-box p-20">
-        <div class="message-widget contact-widget">
-            <!-- Message -->
-            <a href="#" *ngFor='let candidate of candidates'>
-                <div class="user-img">
-                    <img [src]='candidate.image_url' alt="user" class="img-circle">
-                    <span class="profile-status pull-right {{candidate.phone_no}}"></span>
-                </div>
-                <div class="mail-contnet">
-                    <h5>{{candidate.name}} </h5>
-                    <span class="mail-desc">{{candidate.email}}</span>
-                </div>
-            </a>
+  <div class="p-20 bg-info position-relative">
+    <h4 class="card-title text-white m-0">Participants</h4>
+    <h6 class="card-subtitle text-white m-0 op-5">Arranged Alphabatically</h6>
+    <!-- <button mat-mini-fab color="accent" class="add-contact">+</button> -->
+  </div>
+  <div *ngIf="candidates" class="message-box contact-box p-20">
+    <div class="message-widget contact-widget">
+      <div *ngFor="let candidate of candidates">
+        <div fxLayout="row" fxLayoutGap="10px">
+          <div
+            fxFlex.gt-lg="25"
+            fxFlex.gt-md="33"
+            fxFlex.gt-xs="100"
+            fxFlex="100"
+          >
+            <div class="user-img">
+              <img [src]="candidate.image_url" alt="user" class="img-circle" />
+              <span
+                class="profile-status pull-right {{ candidate.phone_no }}"
+              ></span>
+            </div>
+          </div>
+
+          <div
+            fxFlex.gt-lg="50"
+            fxFlex.gt-md="66"
+            fxFlex.gt-xs="100"
+            fxFlex="100"
+          >
+            
+              <h5 class="m-0">{{ candidate.name }}</h5>
+              <span class="mail-desc">{{ candidate.email }}</span>
+           
+          </div>
+          <div
+            fxFlex.gt-lg="20"
+            fxFlex.gt-md="33"
+            fxFlex.gt-xs="100"
+            fxFlex="100"
+          >
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="onViewDetails(candidate)"
+            >
+              Details
+            </button>
+          </div>
         </div>
+      </div>
+      <!-- Message -->
+      <!-- <a href="#" *ngFor="let candidate of candidates">
+        <div class="user-img">
+          <img [src]="candidate.image_url" alt="user" class="img-circle" />
+          <span
+            class="profile-status pull-right {{ candidate.phone_no }}"
+          ></span>
+        </div>
+        <div class="mail-contnet">
+          <h5>{{ candidate.name }}</h5>
+          <span class="mail-desc">{{ candidate.email }}</span>
+        </div>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="onViewDetails(candidate)"
+        >
+          Details
+        </button>
+      </a> -->
     </div>
+  </div>
 </mat-card>
+<hr />
+<div *ngIf="selectedCandidate" class="row">
+  <app-candidate-details
+    [candidate]="selectedCandidate"
+  ></app-candidate-details>
+</div>
