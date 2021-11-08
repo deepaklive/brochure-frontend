@@ -13,6 +13,7 @@ import { EditBrochureComponent } from './edit-brochure/edit-brochure/edit-brochu
 import { EditInstituteComponent } from './edit-brochure/edit-institute/edit-institute.component';
 import { EditCandidateComponent } from './edit-brochure/edit-candidate/edit-candidate.component';
 import { EditCompetenciesComponent } from './edit-brochure/edit-competencies/edit-competencies.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -32,6 +33,7 @@ import { EditCompetenciesComponent } from './edit-brochure/edit-competencies/edi
     DemoMaterialModule,
     FlexLayoutModule,
     ChartistModule,
+    NgImageSliderModule,
     RouterModule.forChild(DashboardRoutes)
   ]
 })

@@ -23,7 +23,6 @@ export interface CandidateModel {
     it_role: boolean;
     aviation_role: boolean;
   
-    //INDUSTRY
-  }
   
+  }
   
