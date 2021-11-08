@@ -1,1 +1,78 @@
-<p>candidate-details works!</p>
+<mat-card>
+  <mat-card-content>
+    <h3></h3>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="oh little-profile">
+  <img
+    mat-card-image
+    src="assets/images/background/profile-bg.jpg"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <div class="pro-img">
+      <img
+        src="assets/images/users/4.jpg"
+        width="100"
+        alt="user"
+        class="img-circle"
+      />
+    </div>
+    <h3 class="m-b-0">{{ candidate.name | uppercase }}</h3>
+    <a href="{{ candidate.linkedIn }}" class="m-t-0"
+      >LinkedIn : {{ candidate.linkedIn }}</a
+    >
+    <mat-card-actions>
+      <button mat-raised-button color="warn">One Pager</button>
+      <button mat-raised-button color="primary">Resume</button>
+    </mat-card-actions>
+    <div fxLayout="row" fxLayoutWrap="wrap" class="m-t-30">
+      <div
+        style="background-color: dimgrey; color: white"
+        fxFlex.gt-sm="33.33%"
+        fxFlex.gt-xs="33.33%"
+        fxFlex="100"
+      >
+        <h3 class="m-0 font-dark">Core Competencies</h3>
+        <ul>
+          <div *ngFor="let cc of competencies">
+            <li>{{ cc.core_competencies }}<br /></li>
+          </div>
+        </ul>
+
+        <hr />
+
+        <h3 class="m-0 font-dark">Education</h3>
+        <ul>
+          <div *ngFor="let edu of education">
+            <li>{{ edu.qualification }}<br /></li>
+          </div>
+        </ul>
+
+        <hr />
+
+        <h3 class="m-0 font-dark">Skill Set</h3>
+        <ul>
+          <div *ngFor="let skill of skills">
+            <li>{{ skill.skill }}<br /></li>
+          </div>
+        </ul>
+
+        <hr />
+      </div>
+      <div fxFlex.gt-sm="66.66%" fxFlex.gt-xs="66.66%" fxFlex="100">
+        <p>{{ candidate.introduction }}</p>
+        <hr />
+        <h3 class="m-0 font-dark">Certifications & Courses</h3>
+
+        <div *ngFor="let course of certifications">
+          <b>{{ course.certificate }} </b>
+          <span *ngIf="course.institute"
+            >from <b>{{ course.institute }}</b></span
+          >
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
