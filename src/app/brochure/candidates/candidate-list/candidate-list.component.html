@@ -1,1 +1,22 @@
-<p>candidate-list works!</p>
+<mat-card>
+    <div class="p-20 bg-info position-relative">
+        <h4 class="card-title text-white m-0">My Contact</h4>
+        <h6 class="card-subtitle text-white m-0 op-5">Checkout my contacts here</h6>
+        <button mat-mini-fab color="accent" class="add-contact">+</button>
+    </div>
+    <div *ngIf="candidates" class="message-box contact-box p-20">
+        <div class="message-widget contact-widget">
+            <!-- Message -->
+            <a href="#" *ngFor='let candidate of candidates'>
+                <div class="user-img">
+                    <img [src]='candidate.image_url' alt="user" class="img-circle">
+                    <span class="profile-status pull-right {{contact.phone_no}}"></span>
+                </div>
+                <div class="mail-contnet">
+                    <h5>{{candidate.name}} </h5>
+                    <span class="mail-desc">{{candidate.email}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</mat-card>

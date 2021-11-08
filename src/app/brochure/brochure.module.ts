@@ -14,6 +14,7 @@ import { EditInstituteComponent } from './edit-brochure/edit-institute/edit-inst
 import { EditCandidateComponent } from './edit-brochure/edit-candidate/edit-candidate.component';
 import { EditCompetenciesComponent } from './edit-brochure/edit-competencies/edit-competencies.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { CandidateService } from '../_services/candidate.service';
 
 
 
@@ -35,6 +36,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     ChartistModule,
     NgImageSliderModule,
     RouterModule.forChild(DashboardRoutes)
+  ],
+  providers:[
+    
   ]
 })
 export class BrochureModule { }
