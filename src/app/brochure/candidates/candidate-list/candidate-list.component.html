@@ -6,8 +6,8 @@
   </div>
   <div *ngIf="candidates" class="message-box contact-box p-20">
     <div class="message-widget contact-widget">
-      <div *ngFor="let candidate of candidates">
-        <div fxLayout="row" fxLayoutGap="10px">
+      <div *ngFor="let candidate of candidates" >
+        <div fxLayout="row" fxLayoutGap="10px"> (click)="onViewDetails(candidate)
           <div
             fxFlex.gt-lg="25"
             fxFlex.gt-md="33"
@@ -45,20 +45,7 @@
               <span class="mail-desc">{{ candidate.experience }}</span>
            
           </div>
-          <div
-            fxFlex.gt-lg="20"
-            fxFlex.gt-md="33"
-            fxFlex.gt-xs="100"
-            fxFlex="100"
-          >
-            <button
-              mat-raised-button
-              color="warn"
-              (click)="onViewDetails(candidate)"
-            >
-              Details
-            </button>
-          </div>
+          
         </div>
       </div>
       <!-- Message -->

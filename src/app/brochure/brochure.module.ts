@@ -21,6 +21,7 @@ import { BrochureComponent } from './brochure.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CandidateDataentryComponent } from './candidates/candidate-dataentry/candidate-dataentry.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TriServicesComponent,
     BrochureComponent,
     CandidateDataentryComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
