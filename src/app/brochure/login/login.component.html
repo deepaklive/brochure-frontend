@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div *ngIf="!loggedIn" class="row">
+  <h4>Not Signed In</h4>
+  <br />
+  <button mat-raised-button (click)="signInWithGoogle()">Google</button>
+  <button mat-raised-button (click)="signInWithFB()">Facebook</button>
+</div>
+
+<div class="loggedIn">
+  <h4>Signed in Successfully</h4>
+
+  <!-- <img *ngIf="user.photoUrl" src="{{ user.photoUrl }}" /> -->
+  <div> 
+    <h4>{{ user?.name }}</h4>
+    <p>{{ user?.email }}</p>
+    <p>Logged in with {{ user?.provider }}</p>
+  </div>
+</div>

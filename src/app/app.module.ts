@@ -18,6 +18,7 @@ import { DemoMaterialModule } from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { CandidateService } from './_services/candidate.service';
+import { GoogleLoginProvider, FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CandidateService } from './_services/candidate.service';
     HttpClientModule,
     SharedModule,
     ReactiveFormsModule,
+    SocialLoginModule,
     RouterModule.forRoot(AppRoutes)
   ],
   providers: [
@@ -43,7 +45,24 @@ import { CandidateService } from './_services/candidate.service';
       provide: LocationStrategy,
       useClass: PathLocationStrategy
     },
-    
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '216855251164-tm85njg2bp9lr8lhivqbdqqvpou8d6bs.apps.googleusercontent.com'
+            )
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('clientId')
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { BrochureMainComponent } from "./brochure-main/brochure-main.component";
 import { BrochureComponent } from "./brochure.component";
 import { EditBrochureComponent } from "./edit-brochure/edit-brochure/edit-brochure.component";
+import { LoginComponent } from "./login/login.component";
 
 export const DashboardRoutes: Routes = [
   {
@@ -19,5 +20,9 @@ export const DashboardRoutes: Routes = [
   {
     path: "candidate_dashboard",
     component: BrochureComponent,
+  },
+  {
+    path: "login",
+    component: LoginComponent,
   },
 ];
