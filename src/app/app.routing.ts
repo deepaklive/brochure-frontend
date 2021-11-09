@@ -22,7 +22,7 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'brochure',
+        path: '',
         loadChildren: () => import('./brochure/brochure.module').then(m => m.BrochureModule)
       }
     ]

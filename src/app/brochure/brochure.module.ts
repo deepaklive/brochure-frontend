@@ -17,7 +17,10 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { CandidateService } from '../_services/candidate.service';
 import { ResumeComponent } from './resume/resume.component';
 import { TriServicesComponent } from './common/tri-services/tri-services.component';
-
+import { BrochureComponent } from './brochure.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { CandidateDataentryComponent } from './candidates/candidate-dataentry/candidate-dataentry.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,11 +34,15 @@ import { TriServicesComponent } from './common/tri-services/tri-services.compone
     EditCandidateComponent,
     EditCompetenciesComponent,
     ResumeComponent,
-    TriServicesComponent
+    TriServicesComponent,
+    BrochureComponent,
+    CandidateDataentryComponent,
   ],
   imports: [
     CommonModule,
     DemoMaterialModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     ChartistModule,
     NgImageSliderModule,

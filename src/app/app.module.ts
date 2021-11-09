@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AppRoutes } from './app.routing';
@@ -25,7 +25,7 @@ import { CandidateService } from './_services/candidate.service';
     FullComponent,
     AppHeaderComponent,
     SpinnerComponent,
-    AppSidebarComponent
+    AppSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +35,7 @@ import { CandidateService } from './_services/candidate.service';
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes)
   ],
   providers: [

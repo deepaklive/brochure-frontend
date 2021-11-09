@@ -1,0 +1,80 @@
+<mat-card>
+    <mat-toolbar color="primary" style="border-radius: 5px;">
+        Candidate Data Entry
+    </mat-toolbar>
+    <mat-card-content>
+        <div [formGroup]="dataEntry">
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Service" formControlName="service">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Rank" formControlName="rank">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="35" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Name" formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="15" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select placeholder="Gender" formControlName="gender">
+                            <mat-option value="MALE">MALE</mat-option>
+                            <mat-option value="FEMALE">FEMALE</mat-option>
+                            <mat-option value="TRANSGENDER">TRANSGENDER</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" formControlName="phone_no" placeholder="Phone Number">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" formControlName="qualification" placeholder="Qualification">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" formControlName="linkedIn" placeholder="LinkedIn ID">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="25" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" formControlName="email" placeholder="Email ID">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="50" fxFlex="100">
+                    <mat-form-field>
+                        <textarea matInput type="text" formControlName="experience" placeholder="Experience Details"></textarea>
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="50" fxFlex="100">
+                    <mat-form-field>
+                        <textarea matInput formControlName="introduction" placeholder="Candidate Introduction"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="50" fxFlex="100">
+                    <label>Candidate Image : &nbsp;</label>
+                    <input type="file" formControlName="image_url" placeholder="Candidate Image">
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="10" fxFlex="100">
+                    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
