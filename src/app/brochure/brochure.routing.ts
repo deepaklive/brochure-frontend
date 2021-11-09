@@ -13,6 +13,10 @@ export const DashboardRoutes: Routes = [
     component: EditBrochureComponent,
   },
   {
+    path: "my_profile",
+    component: BrochureComponent,
+  },
+  {
     path: "candidate_dashboard",
     component: BrochureComponent,
   },

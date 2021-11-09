@@ -10,8 +10,8 @@ export interface Menu {
 const MENUITEMS = [
 
   { state: 'brochure', name: 'Dashboard', type: 'link', icon: 'av_timer' },
-  { state: 'candidate_dashboard', name: 'HOME', type: 'link', icon: 'mail' },
-  { state: 'My-Profile', type: 'link', name: 'my-profile', icon: 'crop_7_5' },
+  // { state: 'candidate_dashboard', name: 'HOME', type: 'link', icon: 'mail' },
+  { state: 'my_profile', type: 'link', name: 'My Profile', icon: 'crop_7_5' },
   { state: 'resume', type: 'link', name: 'Resume', icon: 'view_comfy' },
   { state: 'one-pager', type: 'link', name: 'One-Pager', icon: 'view_comfy' },
   { state: 'edit-main', type: 'link', name: 'Edit Profile', icon: 'view_list' },

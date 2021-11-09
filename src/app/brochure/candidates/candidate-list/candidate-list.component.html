@@ -15,7 +15,7 @@
             fxFlex="100"
           >
             <div class="user-img">
-              <img [src]="candidate.image_url" alt="user" class="img-circle" />
+              <img src="assets/images/users/1.jpg" alt="user" class="img-circle" style="max-height: 70px;" />
               <span
                 class="profile-status pull-right {{ candidate.phone_no }}"
               ></span>
@@ -23,14 +23,26 @@
           </div>
 
           <div
-            fxFlex.gt-lg="50"
+            fxFlex.gt-lg="25"
             fxFlex.gt-md="66"
             fxFlex.gt-xs="100"
             fxFlex="100"
           >
             
-              <h5 class="m-0">{{ candidate.name }}</h5>
+              <h5 class="m-0"><strong>{{ candidate.name }}</strong></h5>
               <span class="mail-desc">{{ candidate.email }}</span>
+           
+          </div>
+
+          <div
+            fxFlex.gt-lg="25"
+            fxFlex.gt-md="66"
+            fxFlex.gt-xs="100"
+            fxFlex="100"
+          >
+            
+              <h5 class="m-0"><strong>{{ candidate.service }}</strong></h5>
+              <span class="mail-desc">{{ candidate.experience }}</span>
            
           </div>
           <div
