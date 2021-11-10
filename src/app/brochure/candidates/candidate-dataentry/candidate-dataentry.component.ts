@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-candidate-dataentry',
@@ -11,6 +12,7 @@ export class CandidateDataentryComponent implements OnInit {
   selectedUserRole: any;
   constructor(
     private fb : FormBuilder,
+    private dialogRef : MatDialogRef<any>,
   ) { }
  
   ngOnInit(): void {
@@ -40,6 +42,10 @@ export class CandidateDataentryComponent implements OnInit {
 
   onSubmit(){
     console.log(this.dataEntry?.getRawValue());
+  }
+
+  onClose(){
+    this.dialogRef.close('nothing');
   }
  
 }
