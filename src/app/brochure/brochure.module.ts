@@ -33,6 +33,9 @@ import { ExperienceCardComponent } from './common/experience-card/experience-car
 import { PersonalCardComponent } from './common/personal-card/personal-card.component';
 import { OnePagerComponent } from './one-pager/one-pager.component';
 import { UserRoleComponent } from './common/user-role/user-role.component';
+import { PreferredRolesComponent } from './candidates/candidate-dataentry/preferred-roles/preferred-roles.component';
+import { PreferredIndustriesComponent } from './candidates/candidate-dataentry/preferred-industries/preferred-industries.component';
+
 
 
 @NgModule({
@@ -61,6 +64,9 @@ import { UserRoleComponent } from './common/user-role/user-role.component';
     PersonalCardComponent,
     OnePagerComponent,
     UserRoleComponent,
+    PreferredRolesComponent,
+    PreferredIndustriesComponent,
+   
   ],
   imports: [
     CommonModule,

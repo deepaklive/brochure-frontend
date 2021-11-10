@@ -1,0 +1,95 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Industry Preference</mat-card-title>
+    <mat-card-subtitle
+      >Please Select the industry your would like to prefer</mat-card-subtitle
+    >
+  </mat-card-content>
+  <hr />
+  <mat-card-content>
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onHrm()">AVIONICS</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onScm()">AVIATION</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onOperation()">AUTOMOBILE</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onProject()">CONSULTANT</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onSecurity()">CYBER SECURITY</mat-checkbox>
+      </div>
+    </div>
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">DEFENCE SECTOR</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onIt()">FMCG</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAviation()">HEALTH CARE</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20"><mat-checkbox (click)="onAdmin()">INFRA</mat-checkbox></div>
+      <div fxFlex.gt-sm="20"><mat-checkbox (click)="onAdmin()">IT / ITES</mat-checkbox></div>
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">LOGISTICS</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">PHARMA/BIOTECH</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">R & D</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">SERVICE SECTOR</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()"> SHIP BUILDING </mat-checkbox>
+      </div>
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">TELECOM</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">TRAINING</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">EDUCATION</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">WEAPON SYSTEMS</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20"></div>
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="40">
+        <mat-checkbox (click)="onAdmin()">
+          SEMICONDUCTOR DESIGN & FAB
+        </mat-checkbox>
+      </div>
+
+      <div fxFlex.gt-sm="30">
+        <mat-checkbox (click)="onAdmin()">SOCIAL SERVICE / NGOs</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20"></div>
+      <div fxFlex.gt-sm="20">
+        <button mat-raised-button color="primary" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <br />
+  </mat-card-content>
+</mat-card>

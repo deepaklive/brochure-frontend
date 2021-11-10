@@ -4,65 +4,64 @@
     </mat-toolbar>
     <mat-card-content>
         <button mat-mini-fab color="primary" (click)="onOpenCandidateDetails()"><mat-icon>add</mat-icon></button>
-        <mat-card class="mat-card-style" *ngIf="profileData">
+        <mat-card class="mat-card-style" *ngIf="candidate">
             <h4 class="dataFormat"v>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Service : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.service}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.service}}</div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Rank : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.rank}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.rank}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Name : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.name}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.name}}</div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Gender : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.gender}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.gender}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Phone No : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.phone_no}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.phone_no}}</div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Qualification : </mat-label></div>
-                <div fxFlex.gt-sm="25"fxFlex="100">{{profileData?.qualification}}</div>
+                <div fxFlex.gt-sm="25"fxFlex="100">{{candidate?.qualification}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Course : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.course}}</div>
+                <div fxFlex.gt-sm="25" fxFlex="100">{{candidate?.course}}</div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Experience : </mat-label></div>
-                <div fxFlex.gt-sm="53" fxFlex="100">{{profileData?.experience}}</div>
+                <div fxFlex.gt-sm="53" fxFlex="100">{{candidate?.experience}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Email Id : </mat-label></div>
-                <div fxFlex.gt-sm="55" fxFlex="100">{{profileData?.email}}</div>
+                <div fxFlex.gt-sm="55" fxFlex="100">{{candidate?.email}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>linkedIn Id : </mat-label></div>
-                <div fxFlex.gt-sm="55" fxFlex="100">{{profileData?.linkedIn}}</div>
+                <div fxFlex.gt-sm="55" fxFlex="100">{{candidate?.linkedIn}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
-                <div fxFlex.gt-sm="25" fxFlex="100"><mat-label>Participants Introduction : </mat-label></div>
-                <div fxFlex.gt-sm="73" fxFlex="100">{{profileData?.introduction}}</div>
+                <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Participants Introduction : </mat-label></div>
+                <div fxFlex.gt-sm="83" fxFlex="100">{{candidate?.introduction}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
             </div>
-            <div fxLayout="row" fxLayoutGap="10px">
-                <div fxFlex.gt-sm="1" fxFlex="100"></div>
-                <div fxFlex.gt-sm="25" fxFlex="100"><mat-label>Participants Introduction : </mat-label></div>
-                <div fxFlex.gt-sm="25" fxFlex="100">{{profileData?.introduction}} </div>
-                <div fxFlex.gt-sm="1" fxFlex="100"></div>
-            </div>
+            
             </h4>
         </mat-card>
     </mat-card-content>
 </mat-card>
+
+<app-preferred-roles></app-preferred-roles>
+
+<app-preferred-industries></app-preferred-industries>

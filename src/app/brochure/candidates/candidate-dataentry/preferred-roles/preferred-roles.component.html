@@ -1,0 +1,80 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Roles/Function Preference</mat-card-title>
+    <mat-card-subtitle
+      >Please Select the role your would like to prefer</mat-card-subtitle
+    >
+  </mat-card-content>
+  <hr />
+  <mat-card-content>
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onHrm()">HRM</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onScm()">SCM</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onOperation()">OPERATION MGMT</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onProject()">PROJECT MGMT</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onSecurity()">SECURITY</mat-checkbox>
+      </div>
+    </div>
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">ADMINISTRATION</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onIt()">IT</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAviation()">AVIATION</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">HOSPITAL ADMIN</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20"><mat-checkbox (click)="onAdmin()">QA / QC</mat-checkbox></div>
+    </div>
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">FINANCE</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">EDUCATION ORG</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">STRETEGY MGMT</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="20">
+        
+      </div>
+      <div fxFlex.gt-sm="20"></div>
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="20px">
+      <div fxFlex.gt-sm="30">
+        <mat-checkbox (click)="onAdmin()">TECHNICAL CONTENT WRITING</mat-checkbox>
+      </div>
+      <div fxFlex.gt-sm="30">
+        <mat-checkbox (click)="onAdmin()"
+          >IOT/BLOCK CHAIN/DATA SCIENCES</mat-checkbox
+        >
+      </div>
+      <div fxFlex.gt-sm="20">
+        <mat-checkbox (click)="onAdmin()">LEGAL COMPLIANCE</mat-checkbox>
+      </div>
+
+      <div fxFlex.gt-sm="20">
+        <button mat-raised-button color="primary" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <br />
+  </mat-card-content>
+</mat-card>

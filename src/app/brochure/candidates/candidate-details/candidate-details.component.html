@@ -29,11 +29,9 @@
 <div class="row">
   <div fxLayout="row">
     <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
-      <mat-card>
-        <mat-card-content>
-          <img src="assets/images/users/4.jpg" height="100" alt="user" />
-        </mat-card-content>
-      </mat-card>
+      <app-personal-card
+        [candidate]="candidate"
+      ></app-personal-card>
     </div>
 
     <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
