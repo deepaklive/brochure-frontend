@@ -1,7 +1,7 @@
 export interface CandidateModel {
-    id: number;
-    id_email: string;
-    course: number;
+    id?: number;
+    id_email?: string;
+    course: string;
     name: string;
     rank: string;
     service: string;
@@ -11,18 +11,18 @@ export interface CandidateModel {
     phone_no: string;
     email: string;
     linkedIn: string;
-    image_url: string;
+    image_url?: string;
     introduction: string;
   
     //ROLE
-    hrm_role: boolean;
-    scm_role: boolean;
-    operation_role: boolean;
-    project_role: boolean;
-    security_role: boolean;
-    admin_role: boolean;
-    it_role: boolean;
-    aviation_role: boolean;
+    hrm_role?: boolean;
+    scm_role?: boolean;
+    operation_role?: boolean;
+    project_role?: boolean;
+    security_role?: boolean;
+    admin_role?: boolean;
+    it_role?: boolean;
+    aviation_role?: boolean;
   
   
   }
