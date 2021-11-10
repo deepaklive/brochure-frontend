@@ -29,6 +29,9 @@ import { CompeducationCardComponent } from './common/compeducation-card/compeduc
 import { CompskillCardComponent } from './common/compskill-card/compskill-card.component';
 import { AwardCardComponent } from './common/award-card/award-card.component';
 import { JdCardComponent } from './common/jd-card/jd-card.component';
+import { ExperienceCardComponent } from './common/experience-card/experience-card.component';
+import { PersonalCardComponent } from './common/personal-card/personal-card.component';
+import { OnePagerComponent } from './one-pager/one-pager.component';
 
 
 @NgModule({
@@ -53,6 +56,9 @@ import { JdCardComponent } from './common/jd-card/jd-card.component';
     CompskillCardComponent,
     AwardCardComponent,
     JdCardComponent,
+    ExperienceCardComponent,
+    PersonalCardComponent,
+    OnePagerComponent,
   ],
   imports: [
     CommonModule,

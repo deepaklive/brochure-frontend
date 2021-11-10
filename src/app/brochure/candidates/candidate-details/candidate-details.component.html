@@ -25,52 +25,54 @@
       <button mat-raised-button color="warn">One Pager</button>
       <button mat-raised-button color="primary">Resume</button>
     </mat-card-actions>
-    
   </mat-card-content>
 </mat-card>
 
 <div class="row">
-  <div fxLayout="row" fxLayoutGap="10px">
-    <div fxFlex.gt-md="15%" fxFlex.gt-lg="100%" fxFlex="100">Picture</div>
-    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
-      <app-blank-card
-        [header]="'Certifications'"
-        [items]="awards"
-      ></app-blank-card>
+  <div fxLayout="row">
+    <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
+      <mat-card>
+        <mat-card-content>
+          <img src="assets/images/users/4.jpg" height="100" alt="user" />
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
-      <app-blank-card
-        [header]="'Certifications'"
-        [items]="awards"
-      ></app-blank-card>
+
+    <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-personal-card
+        [candidate]="candidate"
+      ></app-personal-card>
     </div>
-    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
-      <app-blank-card
-        [header]="'Technical Skills Set'"
-        [items]="awards"
-      ></app-blank-card>
+
+    <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-comptencies-card
+        [competencies]="competencies"
+      ></app-comptencies-card>
     </div>
   </div>
 </div>
 <hr />
+
 <div class="row">
-  <div fxLayout="row" fxLayoutGap="10px">
+  <div fxLayout="row">
     <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
       <app-compeducation-card [education]="education"></app-compeducation-card>
-      <hr />
-      <app-cert-card [certifications]="certifications"></app-cert-card>
-      <hr/>
-      <app-award-card [awards]="awards"></app-award-card>
-      <hr />
+      <br /><app-cert-card [certifications]="certifications"></app-cert-card>
+      <br /><app-award-card [awards]="awards"></app-award-card>
+      <br />
       <app-blank-card
         [header]="'Techincal Skill Set'"
         [items]="awards"
       ></app-blank-card>
     </div>
     <div fxFlex.gt-md="66.66%" fxFlex.gt-lg="100%" fxFlex="100">
-      <p>{{ candidate.introduction }}</p>
-        <hr />
-      <app-blank-card [header]="'Experience'" [items]="awards"></app-blank-card>
+      <mat-card>
+        <mat-card-content>
+          <p>{{ candidate.introduction }}</p>
+        </mat-card-content>
+      </mat-card>
+      <br />
+      <app-experience-card [experiences]="experiences"></app-experience-card>
     </div>
   </div>
 </div>

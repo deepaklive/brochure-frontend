@@ -1,0 +1,16 @@
+<mat-card>
+    <div class="p-10 bg-info position-relative">
+      <h4 class="card-title text-white m-0">Education</h4>
+    </div>
+    <div *ngIf="experiences" class="message-box contact-box p-20">
+      <div class="message-widget contact-widget">
+        <div *ngFor="let exp of experiences">
+         <strong> {{ exp.role }}</strong>
+         <br/>
+         <app-jd-card ></app-jd-card>
+
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  
