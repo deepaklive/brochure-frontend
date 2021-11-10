@@ -23,7 +23,5 @@ export interface CandidateModel {
     admin_role?: boolean;
     it_role?: boolean;
     aviation_role?: boolean;
-  
-  
   }
   

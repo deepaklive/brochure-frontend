@@ -32,6 +32,7 @@ import { JdCardComponent } from './common/jd-card/jd-card.component';
 import { ExperienceCardComponent } from './common/experience-card/experience-card.component';
 import { PersonalCardComponent } from './common/personal-card/personal-card.component';
 import { OnePagerComponent } from './one-pager/one-pager.component';
+import { UserRoleComponent } from './common/user-role/user-role.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { OnePagerComponent } from './one-pager/one-pager.component';
     ExperienceCardComponent,
     PersonalCardComponent,
     OnePagerComponent,
+    UserRoleComponent,
   ],
   imports: [
     CommonModule,

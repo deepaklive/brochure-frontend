@@ -1,6 +1,8 @@
 <mat-card>
     <div class="p-10 bg-info position-relative">
-      <h4 class="card-title text-white m-0">Competencies</h4>
+      <h4 class="card-title text-white m-0">Competencies
+        <button mat-mini-fab (click)="onAddComptency()"><mat-icon>add</mat-icon></button>
+      </h4>
     </div>
     <div *ngIf="competencies" class="message-box contact-box p-20">
       <div class="message-widget contact-widget">

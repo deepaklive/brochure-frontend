@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CandidateDataentryComponent implements OnInit {
   dataEntry : FormGroup | undefined;
+  selectedUserRole: any;
   constructor(
     private fb : FormBuilder,
   ) { }
@@ -30,6 +31,11 @@ export class CandidateDataentryComponent implements OnInit {
       image_url : ['', [Validators.required]],
       introduction : ['', [Validators.required]]
     });
+  }
+
+  userRole(role: any){
+    this.selectedUserRole = role;
+    console.log(this.selectedUserRole);
   }
 
   onSubmit(){

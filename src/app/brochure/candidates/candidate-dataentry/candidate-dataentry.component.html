@@ -70,6 +70,7 @@
                     <input type="file" formControlName="image_url" placeholder="Candidate Image">
                 </div>
             </div>
+            <app-user-role (userRole)="userRole($event)"></app-user-role>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="10" fxFlex="100">
                     <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>

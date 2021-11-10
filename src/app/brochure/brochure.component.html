@@ -4,7 +4,7 @@
     </mat-toolbar>
     <mat-card-content>
         <button mat-mini-fab color="primary" (click)="onOpenCandidateDetails()"><mat-icon>add</mat-icon></button>
-        <mat-card class="mat-card-style">
+        <mat-card class="mat-card-style" *ngIf="profileData">
             <h4 class="dataFormat"v>
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>

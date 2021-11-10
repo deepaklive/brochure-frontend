@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
+import { EditCompetenciesComponent } from "../../edit-brochure/edit-competencies/edit-competencies.component";
 
 @Component({
   selector: "app-comptencies-card",
@@ -8,7 +10,16 @@ import { Component, Input, OnInit } from "@angular/core";
 export class ComptenciesCardComponent implements OnInit {
   @Input() competencies: any;
   
-  constructor() {}
+  constructor(
+    private dialog : MatDialog,
+  ) {}
 
   ngOnInit(): void {}
+
+  onAddComptency(){
+    this.dialog.open(EditCompetenciesComponent, {
+      width : '80%',
+      height : '80%',
+    });
+  }
 }
