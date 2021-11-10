@@ -1,0 +1,12 @@
+<mat-card>
+  <div class="p-10 bg-info position-relative">
+    <h4 class="card-title text-white m-0">Certifications</h4>
+  </div>
+  <div *ngIf="certifications" class="message-box contact-box p-20">
+    <div class="message-widget contact-widget">
+      <div *ngFor="let c of certifications">
+        {{ c.certificate }}
+      </div>
+    </div>
+  </div>
+</mat-card>

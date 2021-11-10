@@ -22,6 +22,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { CandidateDataentryComponent } from './candidates/candidate-dataentry/candidate-dataentry.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { BlankCardComponent } from './common/blank-card/blank-card.component';
+import { CertCardComponent } from './common/cert-card/cert-card.component';
+import { ComptenciesCardComponent } from './common/comptencies-card/comptencies-card.component';
+import { CompeducationCardComponent } from './common/compeducation-card/compeducation-card.component';
+import { CompskillCardComponent } from './common/compskill-card/compskill-card.component';
+import { AwardCardComponent } from './common/award-card/award-card.component';
+import { JdCardComponent } from './common/jd-card/jd-card.component';
 
 
 @NgModule({
@@ -39,6 +46,13 @@ import { LoginComponent } from './login/login.component';
     BrochureComponent,
     CandidateDataentryComponent,
     LoginComponent,
+    BlankCardComponent,
+    CertCardComponent,
+    ComptenciesCardComponent,
+    CompeducationCardComponent,
+    CompskillCardComponent,
+    AwardCardComponent,
+    JdCardComponent,
   ],
   imports: [
     CommonModule,

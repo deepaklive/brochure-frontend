@@ -1,5 +1,5 @@
-<mat-toolbar color="primary" style="border-radius: 5px;">
- <span> Candidate Data Entry Dashboard</span>
+<mat-toolbar color="primary" style="border-radius: 5px">
+  <span> Candidate Data Entry Dashboard</span>
 </mat-toolbar>
 <mat-card class="oh little-profile">
   <img
@@ -25,52 +25,52 @@
       <button mat-raised-button color="warn">One Pager</button>
       <button mat-raised-button color="primary">Resume</button>
     </mat-card-actions>
-    <div fxLayout="row" fxLayoutWrap="wrap" class="m-t-30">
-      <div
-        style="background-color: dimgrey; color: white"
-        fxFlex.gt-sm="33.33%"
-        fxFlex.gt-xs="33.33%"
-        fxFlex="100"
-      >
-        <h3 class="m-0 font-dark">Core Competencies</h3>
-        <ul>
-          <div *ngFor="let cc of competencies">
-            <li>{{ cc.core_competencies }}<br /></li>
-          </div>
-        </ul>
-
-        <hr />
-
-        <h3 class="m-0 font-dark">Education</h3>
-        <ul>
-          <div *ngFor="let edu of education">
-            <li>{{ edu.qualification }}<br /></li>
-          </div>
-        </ul>
-
-        <hr />
-
-        <h3 class="m-0 font-dark">Skill Set</h3>
-        <ul>
-          <div *ngFor="let skill of skills">
-            <li>{{ skill.skill }}<br /></li>
-          </div>
-        </ul>
-
-        <hr />
-      </div>
-      <div fxFlex.gt-sm="66.66%" fxFlex.gt-xs="66.66%" fxFlex="100">
-        <p>{{ candidate.introduction }}</p>
-        <hr />
-        <h3 class="m-0 font-dark">Certifications & Courses</h3>
-
-        <div *ngFor="let course of certifications">
-          <b>{{ course.certificate }} </b>
-          <span *ngIf="course.institute"
-            >from <b>{{ course.institute }}</b></span
-          >
-        </div>
-      </div>
-    </div>
+    
   </mat-card-content>
 </mat-card>
+
+<div class="row">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <div fxFlex.gt-md="15%" fxFlex.gt-lg="100%" fxFlex="100">Picture</div>
+    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-blank-card
+        [header]="'Certifications'"
+        [items]="awards"
+      ></app-blank-card>
+    </div>
+    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-blank-card
+        [header]="'Certifications'"
+        [items]="awards"
+      ></app-blank-card>
+    </div>
+    <div fxFlex.gt-md="28%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-blank-card
+        [header]="'Technical Skills Set'"
+        [items]="awards"
+      ></app-blank-card>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
+      <app-compeducation-card [education]="education"></app-compeducation-card>
+      <hr />
+      <app-cert-card [certifications]="certifications"></app-cert-card>
+      <hr/>
+      <app-award-card [awards]="awards"></app-award-card>
+      <hr />
+      <app-blank-card
+        [header]="'Techincal Skill Set'"
+        [items]="awards"
+      ></app-blank-card>
+    </div>
+    <div fxFlex.gt-md="66.66%" fxFlex.gt-lg="100%" fxFlex="100">
+      <p>{{ candidate.introduction }}</p>
+        <hr />
+      <app-blank-card [header]="'Experience'" [items]="awards"></app-blank-card>
+    </div>
+  </div>
+</div>

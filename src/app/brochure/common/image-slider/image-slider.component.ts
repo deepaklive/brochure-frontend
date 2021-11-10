@@ -19,7 +19,7 @@ export class ImageSliderComponent {
       title: "Image 1",
     },
     {
-      image: 'assets/images/big/img2.jpg',
+      image: 'assets/images/big/img3.jpg',
       thumbImage: 'assets/images/big/img2.jpg',
       title: 'Image 1'
     },

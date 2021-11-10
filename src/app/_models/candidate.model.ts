@@ -1,5 +1,6 @@
 export interface CandidateModel {
     id: number;
+    id_email: string;
     course: number;
     name: string;
     rank: string;

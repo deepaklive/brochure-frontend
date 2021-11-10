@@ -20,6 +20,7 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { CandidateService } from './_services/candidate.service';
 import { GoogleLoginProvider, FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 
+
 @NgModule({
   declarations: [
     AppComponent,
