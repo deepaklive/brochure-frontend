@@ -1,12 +1,10 @@
 <mat-card>
-  <mat-card-content>
-    <mat-card-title>Industry Preference</mat-card-title>
-    <mat-card-subtitle
-      >Please Select the industry your would like to prefer</mat-card-subtitle
-    >
-  </mat-card-content>
-  <hr />
-  <mat-card-content>
+  <div class="p-10 bg-info position-relative">
+    <h3 class="card-title text-white m-0">Industry Preference</h3>
+    <p class="text-white m-0">Please Select the industry your would like to prefer</p>
+  </div>
+
+    <mat-card-content>
     <div class="row" fxLayout="row" fxLayoutGap="20px">
       <div fxFlex.gt-sm="20">
         <mat-checkbox (click)="onHrm()">AVIONICS</mat-checkbox>
@@ -84,8 +82,8 @@
       </div>
       <div fxFlex.gt-sm="20"></div>
       <div fxFlex.gt-sm="20">
-        <button mat-raised-button color="primary" (click)="onSubmit()">
-          Submit
+        <button mat-raised-button color="warn" (click)="onSubmit()">
+          Update
         </button>
       </div>
     </div>

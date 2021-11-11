@@ -55,7 +55,7 @@ export class BrochureComponent implements OnInit {
   onOpenCandidateDetails() {
     this.dialog.open(CandidateDataentryComponent, {
       width: "80%",
-      height: "80%",
+      height: "90%",
     });
   }
 }

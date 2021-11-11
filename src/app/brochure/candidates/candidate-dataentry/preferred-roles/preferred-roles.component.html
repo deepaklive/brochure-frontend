@@ -1,11 +1,9 @@
 <mat-card>
-  <mat-card-content>
-    <mat-card-title>Roles/Function Preference</mat-card-title>
-    <mat-card-subtitle
-      >Please Select the role your would like to prefer</mat-card-subtitle
-    >
-  </mat-card-content>
-  <hr />
+  <div class="p-10 bg-info position-relative">
+    <h3 class="card-title text-white m-0">Roles/Function Preference</h3>
+    <p class="text-white m-0">Please Select the role your would like to prefer</p>
+  </div>
+  
   <mat-card-content>
     <div class="row" fxLayout="row" fxLayoutGap="20px">
       <div fxFlex.gt-sm="20">
@@ -69,8 +67,8 @@
       </div>
 
       <div fxFlex.gt-sm="20">
-        <button mat-raised-button color="primary" (click)="onSubmit()">
-          Submit
+        <button mat-raised-button color="warn" (click)="onSubmit()">
+          Update
         </button>
       </div>
     </div>

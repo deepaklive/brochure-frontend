@@ -7,4 +7,5 @@ export const environment = {
   production: false,
 
   brochure_api: "http://localhost:8000/api",
+  //brochure_api: "https://digital-brochure.herokuapp.com/api",
 };
