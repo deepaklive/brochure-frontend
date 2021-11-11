@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
 
-  brochure_api: "http://localhost:8000/api",
+  brochure_api: "https://digital-brochure.herokuapp.com/api",
 };
