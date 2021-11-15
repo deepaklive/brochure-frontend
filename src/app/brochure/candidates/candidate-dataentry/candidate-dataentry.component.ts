@@ -65,7 +65,6 @@ export class CandidateDataentryComponent implements OnInit {
     }
     console.log(this.candidateData);
     if(this.candidate.id){
-     // this.createParticipant(this.candidateData);
       this.updateParticipant(this.candidateData);
     } else {
       this.createParticipant(this.candidateData);
