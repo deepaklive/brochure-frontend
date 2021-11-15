@@ -65,6 +65,7 @@ export class CandidateDataentryComponent implements OnInit {
     }
     console.log(this.candidateData);
     if(this.candidate.id){
+     // this.createParticipant(this.candidateData);
       this.updateParticipant(this.candidateData);
     } else {
       this.createParticipant(this.candidateData);
@@ -91,14 +92,23 @@ export class CandidateDataentryComponent implements OnInit {
       }
     );
   }
+
   updateParticipant(obj: CandidateModel){
     this.isLoading = true;
-    this.candidateService.patch(obj).subscribe(res=>{
-      if(res){
-        window.alert('Data Updated Succesfully');
-        this.dialogRef.close('success');
-      }
-     })
+    var conf = confirm('Do You Want To Update The Record ?');
+    if(conf === true){
+      this.candidateService.patch(obj).subscribe(res=>{
+        if(res){
+          window.alert('Data Updated Succesfully');
+          this.dialogRef.close('success');
+        }
+       }, err=>{
+         window.alert(err);
+       });
+    } else {
+      window.alert('Record Not Updated !');
+    }
+  
   }
 
 }

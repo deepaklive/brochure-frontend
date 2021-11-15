@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { CandidateModel } from 'src/app/_models/candidate.model';
 import { CandidateService } from 'src/app/_services/candidate.service';
 
@@ -7,8 +7,10 @@ import { CandidateService } from 'src/app/_services/candidate.service';
   templateUrl: './preferred-roles.component.html',
   styleUrls: ['./preferred-roles.component.css']
 })
-export class PreferredRolesComponent implements OnInit {
+export class PreferredRolesComponent implements OnInit, OnChanges {
+
   @Input() candidate : CandidateModel | undefined;
+
   hrm_role: boolean = false;
   scm_role: boolean = false;
   operation_role: boolean = false;
@@ -37,19 +39,23 @@ export class PreferredRolesComponent implements OnInit {
   ngOnInit(): void {
     this.createObj();
   }
+
+  ngOnChanges(){
+    this.createObj();
+  }
   createObj(){
     this.candidate = {
-      id : this.candidate.id,
-      name: this.candidate.name,
-      rank: this.candidate.rank,
-      service: this.candidate.service,
-      experience: this.candidate.experience,
-      qualification: this.candidate.qualification,
-      gender: this.candidate.gender,
-      phone_no: this.candidate.phone_no,
-      email: this.candidate.email,
-      linkedIn: this.candidate.linkedIn,
-      introduction: this.candidate.introduction,
+      id : this.candidate?.id,
+      name: this.candidate ? this.candidate?.name : 'null',
+      rank: this.candidate ? this.candidate?.rank : 'null',
+      service: this.candidate ? this.candidate?.service : 'null',
+      experience: this.candidate ? this.candidate?.experience : 'null',
+      qualification: this.candidate ? this.candidate?.qualification : 'null',
+      gender: this.candidate ? this.candidate?.gender : 'null',
+      phone_no: this.candidate ? this.candidate?.phone_no : 'null',
+      email: this.candidate ? this.candidate?.email : 'null',
+      linkedIn: this.candidate ? this.candidate?.linkedIn : 'null',
+      introduction: this.candidate ? this.candidate?.introduction : 'null',
 
       hrm_role: this.hrm_role,
       scm_role: this.scm_role,

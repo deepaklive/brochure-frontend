@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { CandidateModel } from "src/app/_models/candidate.model";
 
 @Component({
   selector: "app-preferred-industries",
@@ -6,6 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
   styleUrls: ["./preferred-industries.component.css"],
 })
 export class PreferredIndustriesComponent implements OnInit {
+  
+  @Input() candidate : CandidateModel | undefined;
+
   hrm_role: boolean = false;
   scm_role: boolean = false;
   operation_role: boolean = false;

@@ -24,7 +24,7 @@ export class BrochureComponent implements OnInit {
   //   introduction: 'hard worker !',
   //   //image_url: ,
   // }
-  candidate : CandidateModel | undefined;
+  candidate : CandidateModel;
   isLoading = false;
   isLoadingDelete = false;
   default_email = 'afp25deepak_k%40mdi.ac.in';
