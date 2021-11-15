@@ -3,7 +3,10 @@
         Participant's Dashboard
     </mat-toolbar>
     <mat-card-content>
-        <button mat-mini-fab color="primary" (click)="onOpenCandidateDetails()"><mat-icon>add</mat-icon></button>
+        <button mat-mini-fab color="primary" *ngIf="!candidate" (click)="onOpenCandidateDetails(candidate)"><mat-icon>add</mat-icon></button>
+        <button mat-mini-fab color="primary" *ngIf="candidate" (click)="onOpenCandidateDetails(candidate)"><mat-icon>update</mat-icon></button>
+        <button mat-mini-fab color="warn" *ngIf="candidate" (click)="onDeleteDetails(candidate)"><mat-icon>delete</mat-icon></button>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
         <mat-card class="mat-card-style" *ngIf="candidate">
             <h4 class="dataFormat"v>
             <div fxLayout="row" fxLayoutGap="10px">
@@ -55,13 +58,12 @@
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Participants Introduction : </mat-label></div>
                 <div fxFlex.gt-sm="83" fxFlex="100">{{candidate?.introduction}}</div>
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
-            </div>
-            
+            </div> 
             </h4>
         </mat-card>
     </mat-card-content>
 </mat-card>
 
-<app-preferred-roles></app-preferred-roles>
+<app-preferred-roles [candidate]="candidate"></app-preferred-roles>
 
-<app-preferred-industries></app-preferred-industries>
+<app-preferred-industries [candidate]="candidate"></app-preferred-industries>

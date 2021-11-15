@@ -1,7 +1,7 @@
 export interface CandidateModel {
     id?: number;
     id_email?: string;
-    course: string;
+    course?: string;
     name: string;
     rank: string;
     service: string;
@@ -23,5 +23,14 @@ export interface CandidateModel {
     admin_role?: boolean;
     it_role?: boolean;
     aviation_role?: boolean;
+
+    hospital_admin?: boolean;
+    qc_qa?: boolean;
+    finance?: boolean;
+    education_org?: boolean;
+    strategy?: boolean;
+    technical_writing?: boolean;
+    block_chain?: boolean;
+    legal_compliance?: boolean;
   }
   
