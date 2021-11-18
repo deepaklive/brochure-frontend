@@ -1,8 +1,8 @@
 export interface EducationModel {
-    id: number;
+    id?: number;
     candidate: number;
-    qualification: number;
-    institute: number;
+    qualification: string;
+    institute: string;
     year: number;
   }
   

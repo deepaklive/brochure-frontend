@@ -67,6 +67,12 @@ export class CandidateDetailsComponent implements OnInit, OnChanges {
     this.getjd;
   }
 
+  educationUpdated(event : string){
+    if(event === 'education updated'){
+      this.getEducation();
+    }
+  }
+
 
   getCompetencies() {
     this.isLoadingCompetencies = true;

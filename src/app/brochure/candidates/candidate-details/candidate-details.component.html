@@ -52,7 +52,7 @@
 <div class="row">
   <div fxLayout="row">
     <div fxFlex.gt-md="33.33%" fxFlex.gt-lg="100%" fxFlex="100">
-      <app-compeducation-card [education]="education"></app-compeducation-card>
+      <app-compeducation-card [education]="education" [candidate]="candidate" (educationUpdated)="educationUpdated($event)"></app-compeducation-card>
       <br /><app-cert-card [certifications]="certifications"></app-cert-card>
       <br /><app-award-card [awards]="awards"></app-award-card>
       <br />

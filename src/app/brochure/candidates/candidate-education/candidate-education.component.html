@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-toolbar color="primay" style="border-radius: 5px;">
+        ADD EDUCATION DETAILS PANEL
+    </mat-toolbar>
+    <mat-card-content>
+        <div [formGroup]="educationForm">
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="40" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Qualification" formControlName="qualification">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="40" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Name Of Institute" formControlName="institute">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="20" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Passing Year" formControlName="year">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="education">
+                    <button mat-raised-button color="warn" (click)="onSubmit()">Submit</button>
+                </div>
+                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="!education">
+                    <button mat-raised-button color="warn" (click)="onSubmit()">Update</button>
+                </div>
+                <div fxFlex.gt-sm="15" fxFlex="100">
+                    <button mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
