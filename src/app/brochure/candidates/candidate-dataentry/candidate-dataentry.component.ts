@@ -96,7 +96,7 @@ export class CandidateDataentryComponent implements OnInit {
     this.isLoading = true;
     var conf = confirm('Do You Want To Update The Record ?');
     if(conf === true){
-      this.candidateService.patch(obj).subscribe(res=>{
+      this.candidateService.update(obj).subscribe(res=>{
         if(res){
           window.alert('Data Updated Succesfully');
           this.dialogRef.close('success');

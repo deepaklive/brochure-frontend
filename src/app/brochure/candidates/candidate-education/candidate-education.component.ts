@@ -50,7 +50,7 @@ export class CandidateEducationComponent implements OnInit {
         institute: this.educationForm.get('institute')?.value,
         year: this.educationForm.get('year')?.value,
       }
-      this.educationService.patch(this.education).subscribe(res=>{
+      this.educationService.update(this.education).subscribe(res=>{
         if(res){
           window.alert('Education Information Updated Successfully.');
           this.dialogRef.close('success');
