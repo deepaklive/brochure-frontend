@@ -1,11 +1,14 @@
 <mat-card>
   <div class="p-10 bg-info position-relative">
-    <h4 class="card-title text-white m-0">Certifications</h4>
+    <h4 class="card-title text-white m-0">Certifications
+      <button mat-mini-fab (click)="onAddCertificate()"><mat-icon>add</mat-icon></button>
+    </h4>
   </div>
   <div *ngIf="certifications" class="message-box contact-box p-20">
     <div class="message-widget contact-widget">
       <div *ngFor="let c of certifications">
-        {{ c.certificate }}
+        {{ c.certificate }} - {{c.institute}} - {{c.valid_upto}} &nbsp;
+        <mat-icon (click)="onUpdateCertificate()">update</mat-icon>
       </div>
     </div>
   </div>

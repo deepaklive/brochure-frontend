@@ -73,6 +73,12 @@ export class CandidateDetailsComponent implements OnInit, OnChanges {
     }
   }
 
+  certificateUpdated(event : string){
+    if(event === 'certificate updated'){
+      this.getCertifications();
+    }
+  } 
+
 
   getCompetencies() {
     this.isLoadingCompetencies = true;

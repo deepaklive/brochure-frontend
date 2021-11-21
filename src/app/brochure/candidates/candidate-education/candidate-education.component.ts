@@ -12,9 +12,9 @@ import { EducationService } from 'src/app/_services/education.service';
 })
 export class CandidateEducationComponent implements OnInit {
   educationForm !: FormGroup;
-  education : EducationModel;
-  candidate : CandidateModel; 
-  operation : string;
+  education !: EducationModel;
+  candidate !: CandidateModel; 
+  operation !: string;
   constructor(
     private fb : FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data : any,

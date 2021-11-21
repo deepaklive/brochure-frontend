@@ -1,14 +1,14 @@
 <mat-card>
     <mat-toolbar color="primay" style="border-radius: 5px;">
-        ADD EDUCATION DETAILS PANEL
+        ADD CERTIFICATE DETAILS PANEL
     </mat-toolbar>
     <mat-card-content>
-        <div [formGroup]="educationForm">
+        <div [formGroup]="certificateForm">
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="40" fxFlex="100">
                     <mat-form-field>
                         <input matInput type="text" oninput="this.value = this.value.toUpperCase()"
-                         placeholder="Qualification" formControlName="qualification">
+                         placeholder="Certificate" formControlName="certificate">
                     </mat-form-field>
                 </div>
                 <div fxFlex.gt-sm="40" fxFlex="100">
@@ -19,15 +19,15 @@
                 </div>
                 <div fxFlex.gt-sm="20" fxFlex="100">
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Passing Year" formControlName="year">
+                        <input matInput type="number" placeholder="Valid Upto Year" formControlName="valid_upto">
                     </mat-form-field>
                 </div>
             </div>
             <div fxLayout="row" fxLayoutGap="10px">
-                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="!education">
+                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="!certificate">
                     <button mat-raised-button color="warn" (click)="onSubmit()">Submit</button>
                 </div>
-                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="education">
+                <div fxFlex.gt-sm="15" fxFlex="100" *ngIf="certificate">
                     <button mat-raised-button color="warn" (click)="onSubmit()">Update</button>
                 </div>
                 <div fxFlex.gt-sm="15" fxFlex="100">

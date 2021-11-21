@@ -36,6 +36,7 @@ import { OnePagerComponent } from "./one-pager/one-pager.component";
 import { PreferredRolesComponent } from "./candidates/candidate-dataentry/preferred-roles/preferred-roles.component";
 import { PreferredIndustriesComponent } from "./candidates/candidate-dataentry/preferred-industries/preferred-industries.component";
 import { CandidateEducationComponent } from './candidates/candidate-education/candidate-education.component';
+import { CandidateCertificateComponent } from './candidates/candidate-certificate/candidate-certificate.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { CandidateEducationComponent } from './candidates/candidate-education/ca
     PreferredRolesComponent,
     PreferredIndustriesComponent,
     CandidateEducationComponent,
+    CandidateCertificateComponent,
   ],
   imports: [
     CommonModule,

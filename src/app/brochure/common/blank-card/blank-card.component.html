@@ -1,8 +1,9 @@
 <mat-card>
   <div class="p-10 bg-info position-relative">
-    <h4 class="card-title text-white m-0">{{ header }}</h4>
+    <h4 class="card-title text-white m-0">{{ header }}
+    </h4>
   </div>
-  <div *ngIf="items" class="message-box contact-box p-20">
+  <div *ngIf="item" class="message-box contact-box p-20">
     <div class="message-widget contact-widget">
       <div *ngFor="let item of items">
         {{ item }}

@@ -8,9 +8,14 @@ import { Component, Input, OnInit } from "@angular/core";
 export class BlankCardComponent implements OnInit {
   
   @Input() header: any;
-  @Input() items: any;
+  @Input() item !: any;
 
-  constructor() {}
+
+  constructor(
+   
+  ) {}
 
   ngOnInit(): void {}
+
+ 
 }
