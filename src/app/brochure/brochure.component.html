@@ -64,6 +64,6 @@
     </mat-card-content>
 </mat-card>
 
-<app-preferred-roles [candidate]="candidate"></app-preferred-roles>
+<app-preferred-roles [candidate]="candidate" (userRoleUpdated)="userRoleUpdated($event)"></app-preferred-roles>
 
 <app-preferred-industries [candidate]="candidate"></app-preferred-industries>

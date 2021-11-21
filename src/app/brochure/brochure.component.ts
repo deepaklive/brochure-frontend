@@ -24,7 +24,7 @@ export class BrochureComponent implements OnInit {
   //   introduction: 'hard worker !',
   //   //image_url: ,
   // }
-  candidate : CandidateModel;
+  candidate !: CandidateModel;
   isLoading = false;
   isLoadingDelete = false;
   default_email = 'afp25deepak_k%40mdi.ac.in';
@@ -37,12 +37,19 @@ export class BrochureComponent implements OnInit {
     this.getCandidates(this.default_email);
   }
 
+  userRoleUpdated(event: boolean){
+    if(event ===  true){
+      this.getCandidates(this.default_email);
+    }
+  }
+
   getCandidates(email: string) {
     this.isLoading = true;
     this.candidateService.getbySearch("candidateId", email).subscribe(
       (res) => {
         const temp: CandidateModel[] = <CandidateModel[]>res;
         this.candidate = temp[0];
+        console.log(this.candidate);
         this.isLoading = false;
       },
       (error) => {

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { CandidateModel } from 'src/app/_models/candidate.model';
 import { CandidateService } from 'src/app/_services/candidate.service';
 
@@ -28,21 +29,65 @@ export class PreferredRolesComponent implements OnInit, OnChanges {
   block_chain : boolean = false;
   legal_compliance: boolean = false;
 
-  roleObj : any;
-  
-  @Output() userRole = new EventEmitter();
-
+  candidateRole !: FormGroup;
+  @Output() userRoleUpdated = new EventEmitter();
+  isLoadingUpdate = false;
   constructor(
     private candidateService : CandidateService,
+    private fb : FormBuilder,
   ) { }
 
   ngOnInit(): void {
-    this.createObj();
+    this.buildForm();
+  }
+
+  buildForm(){
+    this.candidateRole = this.fb.group({
+      hrm_role: [this.candidate?.hrm_role],
+      scm_role: [this.candidate?.scm_role],
+      operation_role: [this.candidate?.operation_role],
+      project_role: [this.candidate?.security_role],
+      security_role: [this.candidate?.security_role],
+      admin_role: [this.candidate?.admin_role],
+      it_role: [this.candidate?.it_role],
+      aviation_role: [this.candidate?.aviation_role],
+      hospital_admin: [this.candidate?.hospital_admin],
+      qc_qa: [this.candidate?.qc_qa],
+      finance: [this.candidate?.finance],
+      education_org: [this.candidate?.education_org],
+      strategy: [this.candidate?.strategy],
+      technical_writing: [this.candidate?.technical_writing],
+      block_chain :[this.candidate?.block_chain],
+      legal_compliance: [this.candidate?.legal_compliance],
+    });
   }
 
   ngOnChanges(){
-    this.createObj();
+    if(this.candidate){
+      this.buildForm();
+      this.setRoleValuesAsPerCandidateModel();
+    }
   }
+
+  setRoleValuesAsPerCandidateModel(){
+    this.hrm_role = this.candidate?.hrm_role ? this.candidate?.hrm_role : false,
+    this.scm_role = this.candidate?.scm_role ? this.candidate?.scm_role : false,
+    this.operation_role = this.candidate?.operation_role ? this.candidate?.operation_role : false,
+    this.project_role = this.candidate?.project_role ? this.candidate?.project_role : false,
+    this.security_role = this.candidate?.security_role ? this.candidate?.security_role : false,
+    this.admin_role = this.candidate?.admin_role ? this.candidate?.admin_role : false,
+    this.it_role = this.candidate?.it_role ? this.candidate?.it_role : false,
+    this.aviation_role = this.candidate?.aviation_role ? this.candidate?.aviation_role : false,
+    this.hospital_admin = this.candidate?.hospital_admin ? this.candidate?.hospital_admin : false,
+    this.qc_qa = this.candidate?.qc_qa ? this.candidate?.qc_qa : false,
+    this.finance = this.candidate?.finance ? this.candidate?.finance : false,
+    this.education_org = this.candidate?.education_org ? this.candidate?.education_org : false,
+    this.strategy = this.candidate?.strategy ? this.candidate?.strategy : false,
+    this.technical_writing = this.candidate?.technical_writing ? this.candidate?.technical_writing : false,
+    this.block_chain = this.candidate?.block_chain ? this.candidate?.block_chain : false,
+    this.legal_compliance = this.candidate?.legal_compliance ? this.candidate?.legal_compliance : false
+  }
+
   createObj(){
     this.candidate = {
       id : this.candidate?.id,
@@ -79,89 +124,65 @@ export class PreferredRolesComponent implements OnInit, OnChanges {
 
   onHrm(){
     this.hrm_role = !this.hrm_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onScm(){
     this.scm_role = !this.scm_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onOperation(){
     this.operation_role = !this.operation_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onProject(){
     this.project_role = !this.project_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onSecurity(){
     this.security_role = !this.security_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onAdmin(){
     this.admin_role = !this.admin_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onIt(){
     this.it_role = !this.it_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onAviation(){
     this.aviation_role = !this.aviation_role;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onHospitalAdmin(){
     this.hospital_admin = !this.hospital_admin;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onQaQc(){
     this.qc_qa = !this.qc_qa;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onFinance(){
     this.finance = !this.finance;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onEducation(){
     this.education_org = !this.education_org;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onStrategy(){
     this.strategy = !this.strategy;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onTechnical(){
     this.technical_writing = !this.technical_writing;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onBlockChain(){
     this.block_chain = !this.block_chain;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
   onLegal(){
     this.legal_compliance = !this.legal_compliance;
-    this.createObj();
-    this.userRole.emit(this.roleObj);
   }
 
 
   onSubmit(){
-    this.candidateService.patch(this.candidate).subscribe(res=>{
-      console.log(res);
-    })
+    this.isLoadingUpdate = true;
+    this.createObj();
+    this.candidateService.update(this.candidate).subscribe(res=>{
+      if(res){
+        this.userRoleUpdated.emit(true);
+        this.isLoadingUpdate = false;
+      }
+    }, err=>{
+      window.alert(err);
+      this.isLoadingUpdate = false;
+    });
   }
 }
