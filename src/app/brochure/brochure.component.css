@@ -5,7 +5,8 @@
     font-weight: bold;
     color: rgb(138, 43, 226, 0.9);
     text-align: justify;
-    text-justify: inter-word; */
+    text-justify: inter-word;
+    border: 2px solid black; */
 }
 
 .mat-card-style{

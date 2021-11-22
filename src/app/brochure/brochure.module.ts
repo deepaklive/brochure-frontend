@@ -37,6 +37,7 @@ import { PreferredRolesComponent } from "./candidates/candidate-dataentry/prefer
 import { PreferredIndustriesComponent } from "./candidates/candidate-dataentry/preferred-industries/preferred-industries.component";
 import { CandidateEducationComponent } from './candidates/candidate-education/candidate-education.component';
 import { CandidateCertificateComponent } from './candidates/candidate-certificate/candidate-certificate.component';
+import { NgxPrintModule } from "ngx-print";
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { CandidateCertificateComponent } from './candidates/candidate-certificat
     ChartistModule,
     NgImageSliderModule,
     RouterModule.forChild(DashboardRoutes),
+    NgxPrintModule
   ],
   providers: [],
 })

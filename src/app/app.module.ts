@@ -18,6 +18,7 @@ import { DemoMaterialModule } from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { CandidateService } from './_services/candidate.service';
+import { NgxPrintModule } from 'ngx-print';
 import { GoogleLoginProvider, FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 
 
@@ -39,7 +40,8 @@ import { GoogleLoginProvider, FacebookLoginProvider, SocialAuthServiceConfig, So
     SharedModule,
     ReactiveFormsModule,
     SocialLoginModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    NgxPrintModule
   ],
   providers: [
     {

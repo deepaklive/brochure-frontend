@@ -6,9 +6,18 @@
         <button mat-mini-fab color="primary" *ngIf="!candidate" (click)="onOpenCandidateDetails(candidate)"><mat-icon>add</mat-icon></button>
         <button mat-mini-fab color="primary" *ngIf="candidate" (click)="onOpenCandidateDetails(candidate)"><mat-icon>update</mat-icon></button>
         <button mat-mini-fab color="warn" *ngIf="candidate" (click)="onDeleteDetails(candidate)"><mat-icon>delete</mat-icon></button>
+        &nbsp;
+        <button 
+        printSectionId="print-section"
+        printTitle="My Angular Print Media"
+        ngxPrint
+        [useExistingCss]="true"
+        mat-raised-button
+        color="primary"
+        >print</button>
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-        <mat-card class="mat-card-style" *ngIf="candidate">
-            <h4 class="dataFormat"v>
+        <mat-card class="mat-card-style" *ngIf="candidate" id="print-section">
+            <h4 class="dataFormat">
             <div fxLayout="row" fxLayoutGap="10px">
                 <div fxFlex.gt-sm="1" fxFlex="100"></div>
                 <div fxFlex.gt-sm="15" fxFlex="100"><mat-label>Service : </mat-label></div>
