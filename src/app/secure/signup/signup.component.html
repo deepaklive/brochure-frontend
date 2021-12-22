@@ -1,0 +1,41 @@
+<div class="pk1" style="width: 50%;">
+    <mat-card>
+        <mat-card-header class="mat-display-1 disp1" >
+            FILL DETAILS TO SIGNUP
+        </mat-card-header>
+
+        <mat-card-content>
+            <form [formGroup]="signupform">
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="First Name" formControlName="first_name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Last Name" formControlName="last_name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="User Name" formControlName="username">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Repeat Password" formControlName="repeat_password">
+                </mat-form-field>
+        
+                <mat-radio-group formControlName="gender" (select)="onGenderSelcet($event.target.value)">
+                    <mat-radio-button value="male">
+                        Male
+                    </mat-radio-button> &nbsp;
+                    <mat-radio-button value="female">
+                        Female
+                    </mat-radio-button>
+                </mat-radio-group> <br><br>
+                <button mat-raised-button (click)="signup()" color="primary" style="float: left;"> signup </button>
+                <small style="float: right;"><a routerLink="../login" > Take me to Login Page </a></small>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

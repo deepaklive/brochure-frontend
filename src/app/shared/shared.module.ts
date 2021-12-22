@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuItems } from './menu-items/menu-items';
 import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } from './accordion';
+import { MatIconModule } from '@angular/material/icon'
+import { FlexLayoutModule } from '@angular/flex-layout';
+// import { MatCardModule } from '@angular/material/card';
+import { DemoMaterialModule } from '../demo-material-module';
 
 
 @NgModule({
@@ -10,10 +14,19 @@ import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } 
     AccordionLinkDirective,
     AccordionDirective
   ],
+  imports: [
+    DemoMaterialModule
+  ],
   exports: [
     AccordionAnchorDirective,
     AccordionLinkDirective,
-    AccordionDirective
+    AccordionDirective,
+    ReactiveFormsModule,
+    FormsModule,
+    MatIconModule,
+    FlexLayoutModule,
+    // MatCardModule,
+    DemoMaterialModule
    ],
   providers: [ MenuItems ]
 })

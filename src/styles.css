@@ -1,3 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../node_modules/font-awesome/css/font-awesome.css";
+
+.pk1 {
+    outline: auto;
+    margin : auto;
+    ruby-align: center;
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+.pk2 {
+    outline: auto;
+    margin : auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+.pkt1 {
+  color: lightslategray;
+}
+
+.pkfc1{
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 1px ;
+}
+
+.pkac {
+  text-justify: auto;
+  text-decoration: lawngreen, underline;
+  text-decoration-thickness: 1px;
+}

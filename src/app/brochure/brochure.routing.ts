@@ -22,10 +22,10 @@ export const DashboardRoutes: Routes = [
     path: "candidate_dashboard",
     component: BrochureComponent,
   },
-  {
-    path: "login",
-    component: LoginComponent,
-  },
+  // {
+  //   path: "login",
+  //   component: LoginComponent,
+  // },
   {
     path: "one-pager",
     component: OnePagerComponent,
