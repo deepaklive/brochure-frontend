@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     if (this.auth.isLoggedIn()) {
-      this.router.navigate(['']);
+      this.router.navigate(['/brochure']);
     }
 
     this.socialAuthService.authState.subscribe(user => {
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       
       console.log('test2: '+this.user);
       this.loggedIn = (user != null);
+      this.router.navigate(['/brochure']);
     });
   }
 
@@ -61,7 +62,10 @@ export class LoginComponent implements OnInit {
   }
 
   signInWithGoogle(): void {
+    const gc =
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
+    console.log(gc, "##############################################")
+    // localStorage.setItem('googleUserName', this.user.name);
   }
 
   signInWithFB(): void {
@@ -70,6 +74,7 @@ export class LoginComponent implements OnInit {
 
   signOut(): void {
     this.socialAuthService.signOut();
+    this.auth.logout();
   }
 
   ngOnChanges(){

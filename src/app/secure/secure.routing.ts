@@ -11,10 +11,6 @@ export const SecureRoutes: Routes = [
     component: ForgotPasswordComponent,
   },
   {
-    path: "not-found",
-    component: NotFoundComponent,
-  },
-  {
     path: "login",
     component: LoginComponent,
   },
@@ -22,5 +18,12 @@ export const SecureRoutes: Routes = [
     path: "sign-up",
     component: SignupComponent,
   },
-  
+  {
+    path: "",
+    component: LoginComponent,
+  },
+  {
+    path: "**",
+    component: NotFoundComponent,
+  },
 ];
